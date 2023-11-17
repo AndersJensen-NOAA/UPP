@@ -64,7 +64,7 @@
               cnvctzgdrag, sconvmois, cnvctmgdrag, cnvctdetmflx, duwt, duem, dusd, dudp,        &
               dusv,ssem,sssd,ssdp,sswt,sssv,bcem,bcsd,bcdp,bcwt,bcsv,ocem,ocsd,ocdp,ocwt,ocsv,  &
               wh, ref_10cm, qqnifa, qqnwfa, avgpmtf, avgozcon, aextc55, taod5503d,              &
-              effri, effrl, effrs
+              effri, effrl, effrs, prog_cldamt
 
       use vrbls2d, only: f, pd, fis, pblh, ustar, z0, ths, qs, twbs, qwbs, avgcprate,           &
               cprate, avgprec, prec, lspa, sno, sndepac, si, cldefi, th10, q10, tshltr, pshltr, &
@@ -959,6 +959,11 @@
       VarName='cieffr'
       call read_netcdf_3d_para(ncid2d,im,jm,ista,ista_2l,iend,iend_2u,jsta,jsta_2l,jend,jend_2u, &
       spval,VarName,effri(ista_2l,jsta_2l,1),lm)
+
+!     WL add cieffr for Thompson scheme cloud ice effective radius
+      VarName='prog_cldamt'
+      call read_netcdf_3d_para(ncid2d,im,jm,ista,ista_2l,iend,iend_2u,jsta,jsta_2l,jend,jend_2u, &
+      spval,VarName,prog_cldamt(ista_2l,jsta_2l,1),lm)
 
 !     WL add cleffr for Thompson scheme cloud water effective radius
       VarName='cleffr'

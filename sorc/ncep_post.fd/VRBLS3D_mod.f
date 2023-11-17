@@ -52,7 +52,8 @@
       ,cnvctdmflx(:,:,:)      &  
       ,cnvctdetmflx(:,:,:)    &
       ,cnvctzgdrag(:,:,:)     &
-      ,cnvctmgdrag(:,:,:)     &   
+      ,cnvctmgdrag(:,:,:)     &
+      ,PROG_CLDAMT(:,:,:)     &   
       ,QQNWFA(:,:,:)          &
       ,QQNIFA(:,:,:)          &
       ,TAOD5503D(:,:,:)       &
